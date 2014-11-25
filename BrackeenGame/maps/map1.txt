@@ -1,0 +1,29 @@
+# Map file for tile-based game 
+# (Lines that start with '#' are comments)
+# The tiles are:
+#   (Space) Empty tile
+#   A..Z    Tiles A through Z
+#   o       Star
+#   !       Music Note
+#   *       Goal
+#   1       Bad Guy 1 (grub)
+#   2       Bad Guy 2 (fly)
+O         JILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJO
+N                                                                                                          N
+N         JILPQR                                                                                           N
+N         ABCOST                                                                                           N
+N         DEFNUV                                                                                          *N
+N         GHKMWX                     2                                                             QRABCABCN
+N                                         2                                                        STDEFDEFN
+N                                              2                                                 UV  GHKGHKN
+N                                                              o                                 WX        N
+N                    oooooooo                                  M                               QR          N
+N                 QRABCABCABC                                  N                               ST          N
+N                 STDEFDEFDEF                                  N      UV                     UV            N
+N               UV  GHKGHKGHK              UV                  N      WX                     WX            N
+N               WX                         WX          QR      N                         1                 N
+N             QR                                       ST      N                 ABBBBBBBO                 N
+N             ST                               UV                                D       N                 N
+N           UV                                 WX              o                 D       N                 N
+M           WX o           3 I    o                            M      1   1      D   3   N31313131313131313M
+JILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILP
