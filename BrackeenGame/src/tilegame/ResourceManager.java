@@ -43,6 +43,10 @@ public class ResourceManager {
         loadCreatureSprites();
         loadPowerUpSprites();
     }
+    
+    public int GetCurrentMap() {
+        return currentMap;
+    }
 
 
     /**
@@ -279,8 +283,7 @@ public class ResourceManager {
 
     public void loadCreatureSprites() {
 
-        Image[][] images = new Image[6][];
-
+        Image[][] images = new Image[10][];
         // load left-facing images
         images[0] = new Image[] {
             loadImage("Pomf/PomfW1.png"),
@@ -348,16 +351,56 @@ public class ResourceManager {
             // right-facing "dead" images
             images[3][i] = getMirrorImage(images[2][i]);
         }
+        
+       
+        //load hurt images
+        images[4] =new Image[]{
+            loadImage("Pomf/PomfH1.png"),
+            loadImage("Pomf/PomfH2.png"),
+            loadImage("Pomf/PomfH3.png"),
+            loadImage("Pomf/PomfH4.png"),
+            loadImage("Enemigo1/Enemigo1H1.png"),
+            loadImage("Enemigo1/Enemigo1H2.png"),
+            loadImage("Enemigo1/Enemigo1H1.png"),
+            loadImage("Enemigo1/Enemigo1H2.png"),
+            loadImage("Enemigo2/Enemigo2H1.png"),
+            loadImage("Enemigo2/Enemigo2H2.png"),
+            loadImage("Enemigo2/Enemigo2H3.png"),
+            loadImage("Enemigo2/Enemigo2H2.png"),
+            loadImage("Enemigo3/Enemigo3H1.png"),
+            loadImage("Enemigo3/Enemigo3H2.png"),
+            loadImage("Enemigo3/Enemigo3H3.png"),
+            loadImage("Enemigo3/Enemigo3H2.png"),
+        };
+        images[5] = new Image[images[4].length];
+        for(int i=0; i<images[4].length; i++) {
+            // right-facing HURT images
+            images[5][i] = getMirrorImage(images[4][i]);
+        }
+        // load jumping images for Pomf
+        images[6] = new Image[]{
+            loadImage("Pomf/PomfJ4.png"),
+            loadImage("Pomf/PomfJ4.png"),
+            loadImage("Pomf/PomfJ4.png"),
+            loadImage("Pomf/PomfJ4.png"),
+        };
+        images[7] = new Image[images[6].length];
+        for(int i=0; i<images[6].length; i++) {
+            // right-facing jump images
+            images[7][i] = getMirrorImage(images[6][i]);
+        }
+        
         //Estos espacios los dejo para las demas animaciones
         //(De hecho creo que necesito mas espacio (modificar la variable arriba)
-        images[4] = new Image[images[0].length];
-        images[5] = new Image[images[0].length];
+        images[8] = new Image[images[0].length];
 
         // create creature animations
-        Animation[] playerAnim = new Animation[6];
-        Animation[] Mugre1Anim = new Animation[5];
-        Animation[] Mugre2Anim = new Animation[5];
-        Animation[] Mugre3Anim = new Animation[5];
+        Animation[] playerAnim = new Animation[8];
+        Animation[] Mugre1Anim = new Animation[6];
+        Animation[] Mugre2Anim = new Animation[6];
+        Animation[] Mugre3Anim = new Animation[6];
+        
+        //Se guardan las imagenes para la animacion de caminado
         for (int i=0; i<2; i++) {
             playerAnim[i] = createWalkingAnim(images[i][0], images[i][1],
                 images[i][2]);
@@ -368,6 +411,7 @@ public class ResourceManager {
             Mugre3Anim[i] = createWalkingAnim(images[i][9],
                 images[i][10], images[i][11]);
         }
+        // Se guardan las imagenes para la animacion de muerte
         for (int i=2; i<4; i++) {
             playerAnim[i] = createDeadAnim(images[i][0], images[i][1],
                 images[i][2],images[i][3], images[i][4], images[i][5],
@@ -382,16 +426,33 @@ public class ResourceManager {
                 images[i][29],images[i][30], images[i][31], images[i][32],
                 images[i][33], images[i][34],images[i][35]);
         }
-
+        for (int i=4; i<6; i++) {
+            playerAnim[i] = createHurtAnim(images[i][0], images[i][1],
+                images[i][2], images[i][3]);
+            Mugre1Anim[i] = createHurtAnim(images[i][4], images[i][5],
+                images[i][6], images[i][7]);
+            Mugre2Anim[i] = createHurtAnim(images[i][8], images[i][9],
+                images[i][10], images[i][11]);
+            Mugre3Anim[i] = createHurtAnim(images[i][12], images[i][13],
+                images[i][14], images[i][15]);
+        }
+        for (int i=6; i<8; i++) {
+            playerAnim[i] = createJumpingAnim(images[i][0], images[i][1],
+                images[i][2], images[i][3]);
+        }
+        
+        
+        //Se guardan las imagenes para el estado hurt
         // create creature sprites
         playerSprite = new Player(playerAnim[0], playerAnim[1],
-            playerAnim[2],playerAnim[3]);
+            playerAnim[2],playerAnim[3],playerAnim[4],playerAnim[5],
+                playerAnim[6],playerAnim[7]);
         flySprite = new Mugre1(Mugre1Anim[0], Mugre1Anim[1],
-            Mugre1Anim[2], Mugre1Anim[3]);
+            Mugre1Anim[2], Mugre1Anim[3], Mugre1Anim[4],Mugre1Anim[5]);
         grubSprite = new Mugre2(Mugre2Anim[0], Mugre2Anim[1],
-            Mugre2Anim[2], Mugre2Anim[3]);
+            Mugre2Anim[2], Mugre2Anim[3], Mugre2Anim[4],Mugre2Anim[5]);
         Mugre3Sprite = new Mugre3(Mugre3Anim[0], Mugre3Anim[1],
-            Mugre3Anim[2], Mugre3Anim[3]);
+            Mugre3Anim[2], Mugre3Anim[3], Mugre3Anim[4],Mugre3Anim[5]);
     }
 
     private Animation createWalkingAnim(Image img1, Image img2,//Se cargan las animaciones de las mugres (enemigos)
@@ -401,6 +462,26 @@ public class ResourceManager {
         anim.addFrame(img1, 100);
         anim.addFrame(img2, 100);
         anim.addFrame(img3, 100);
+        return anim;
+    }
+    
+    private Animation createJumpingAnim(Image img1, Image img2, Image img3, 
+            Image img4){
+        Animation anim = new Animation();
+        anim.addFrame(img1, 100);
+        anim.addFrame(img2, 100);
+        anim.addFrame(img3, 100);
+        anim.addFrame(img4, 100);
+        return anim;
+    }
+    
+    private Animation createHurtAnim(Image img1, Image img2, Image img3, 
+            Image img4){
+        Animation anim = new Animation();
+        anim.addFrame(img1, 100);
+        anim.addFrame(img2, 100);
+        anim.addFrame(img3, 100);
+        anim.addFrame(img4, 100);
         return anim;
     }
     

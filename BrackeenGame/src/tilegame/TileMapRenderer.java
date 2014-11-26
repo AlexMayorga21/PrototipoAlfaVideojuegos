@@ -5,6 +5,7 @@ import java.util.Iterator;
 
 import com.brackeen.javagamebook.graphics.Sprite;
 import com.brackeen.javagamebook.tilegame.sprites.Creature;
+import com.brackeen.javagamebook.graphics.ScreenManager;
 
 /**
     The TileMapRenderer class draws a TileMap on the screen.
@@ -30,12 +31,17 @@ public class TileMapRenderer {
     private Image backgroundA;
     private Image backgroundB;
     private Image backgroundC;
+    private ScreenManager sc;
 
     /**
         Converts a pixel position to a tile position.
     */
     public static int pixelsToTiles(float pixels) {
         return pixelsToTiles(Math.round(pixels));
+    }
+    
+    public void setScreen(ScreenManager screen) {
+        sc=screen;
     }
 
 
@@ -96,6 +102,15 @@ public class TileMapRenderer {
         int offsetY = screenHeight -
             tilesToPixels(map.getHeight());
         
+        // draw black background, if needed
+        if ((backgroundA == null || backgroundB == null || backgroundC == null)
+                || (screenHeight > backgroundA.getHeight(null) ||
+                screenHeight > backgroundB.getHeight(null) ||
+                screenHeight > backgroundC.getHeight(null)) )
+        {
+            g.setColor(Color.black);
+            g.fillRect(0, 0, screenWidth, screenHeight);
+        }
         // draw parallax background image
         if (backgroundA != null) {
             int x = offsetX *
@@ -103,7 +118,7 @@ public class TileMapRenderer {
                 (screenWidth - mapWidth);
             int y = screenHeight - backgroundA.getHeight(null);
 
-            g.drawImage(backgroundA, x, y,screenWidth,screenHeight, null);
+            g.drawImage(backgroundA, x, y,  null);
         }
         
         // draw parallax background image
@@ -124,13 +139,6 @@ public class TileMapRenderer {
             int y = screenHeight - backgroundC.getHeight(null);
 
             g.drawImage(backgroundC, x, y, null);
-        }
-        
-        // draw black background, if needed
-        if ((backgroundA == null || backgroundB == null || backgroundC == null))
-        {
-            g.setColor(Color.red);
-            g.fillRect(0, 0, screenWidth, screenHeight);
         }
 
         // draw the visible tiles

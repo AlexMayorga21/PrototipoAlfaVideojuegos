@@ -8,9 +8,10 @@ import com.brackeen.javagamebook.graphics.Animation;
 public class Mugre3 extends Creature {
 
     public Mugre3(Animation left, Animation right,
-        Animation deadLeft, Animation deadRight)
+        Animation deadLeft, Animation deadRight, Animation hurtLeft,
+        Animation hurtRight)
     {
-        super(left, right, deadLeft, deadRight);
+        super(left, right, deadLeft, deadRight, hurtLeft, hurtRight);
     }
 
 

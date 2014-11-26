@@ -4,6 +4,7 @@ import java.awt.*;
 import javax.swing.*;
 import java.awt.event.KeyEvent;
 import java.util.Iterator;
+import javax.swing.JFrame;
 
 import javax.sound.midi.Sequence;
 import javax.sound.midi.Sequencer;
@@ -41,21 +42,27 @@ public class GameManager extends GameCore {
     private Sound boopSound;
     private InputManager inputManager;
     private TileMapRenderer renderer;
-
+    private int iModoTeclado;
+    private int iVida;
+    private int iPuntaje;
     private GameAction moveLeft;
     private GameAction moveRight;
     private GameAction jump;
+    private GameAction gaDispara;
+    private GameAction gaPausa;
+    private GameAction gaOpciones;
     private GameAction exit;
     private int finish = 0;
+    private boolean bIsJumping;
    
-   
-   
-
-
     public void init() {
         super.init();
         
+        //Inicializar la variable del modo de teclado
+        iModoTeclado=1;
         
+        //Inicia la vida
+        iVida=5;
 
         // set up input manager
         initInput();
@@ -67,9 +74,8 @@ public class GameManager extends GameCore {
         // load resources
         renderer = new TileMapRenderer();
         renderer.setBackground(
-            resourceManager.loadImage("Fondo03A.png"),
-                resourceManager.loadImage("Fondo03B.png"),
-                resourceManager.loadImage("Fondo03C.png"));
+                resourceManager.loadImage("Escenarios/Fondo01B.png"),null,
+                null);
 
         // load first map
         map = resourceManager.loadNextMap();
@@ -82,8 +88,16 @@ public class GameManager extends GameCore {
         // start music
         midiPlayer = new MidiPlayer();
         Sequence sequence =
-            midiPlayer.getSequence("sounds/gang.mid");
+            midiPlayer.getSequence("sounds/poison.mid");
         midiPlayer.play(sequence, true);
+        
+        //Inicializa la variable salto
+        bIsJumping=false;
+        
+        //Inicializa la vida del personaje
+       Player player = (Player)map.getPlayer();
+        player.setVida(iVida, false);
+        map.setPlayer(player);
     }
 
 
@@ -100,19 +114,45 @@ public class GameManager extends GameCore {
     private void initInput() {
         moveLeft = new GameAction("moveLeft");
         moveRight = new GameAction("moveRight");
+        gaDispara = new GameAction("Dispara",
+        GameAction.DETECT_INITAL_PRESS_ONLY);
         jump = new GameAction("jump",
             GameAction.DETECT_INITAL_PRESS_ONLY);
         exit = new GameAction("exit",
             GameAction.DETECT_INITAL_PRESS_ONLY);
-
+        gaPausa = new GameAction("Pausa", GameAction.DETECT_INITAL_PRESS_ONLY);
+        gaOpciones =new GameAction("Opciones",
+                GameAction.DETECT_INITAL_PRESS_ONLY);
+ 
         inputManager = new InputManager(
             screen.getFullScreenWindow());
         inputManager.setCursor(InputManager.INVISIBLE_CURSOR);
-
-        inputManager.mapToKey(moveLeft, KeyEvent.VK_LEFT);
-        inputManager.mapToKey(moveRight, KeyEvent.VK_RIGHT);
-        inputManager.mapToKey(jump, KeyEvent.VK_SPACE);
-        inputManager.mapToKey(exit, KeyEvent.VK_ESCAPE);
+        if(iModoTeclado == 1) {
+            inputManager.clearMap(moveLeft);
+            inputManager.mapToKey(moveLeft, KeyEvent.VK_LEFT);
+            inputManager.clearMap(moveRight);
+            inputManager.mapToKey(moveRight, KeyEvent.VK_RIGHT);
+            inputManager.clearMap(jump);
+            inputManager.mapToKey(jump, KeyEvent.VK_K);
+            inputManager.clearMap(gaDispara);
+            inputManager.mapToKey(gaDispara, KeyEvent.VK_L);
+            inputManager.mapToKey(exit, KeyEvent.VK_ESCAPE);
+            inputManager.mapToKey(gaOpciones, KeyEvent.VK_O);
+            inputManager.mapToKey(gaPausa, KeyEvent.VK_P);
+        }
+        else if(iModoTeclado == 2) {
+            inputManager.clearMap(moveLeft);
+            inputManager.mapToKey(moveLeft, KeyEvent.VK_A);
+            inputManager.clearMap(moveRight);
+            inputManager.mapToKey(moveRight, KeyEvent.VK_D);
+            inputManager.clearMap(jump);
+            inputManager.mapToKey(jump, KeyEvent.VK_Z);
+            inputManager.clearMap(gaDispara);
+            inputManager.mapToKey(gaDispara, KeyEvent.VK_X);
+            inputManager.mapToKey(exit, KeyEvent.VK_ESCAPE);
+            inputManager.mapToKey(gaOpciones, KeyEvent.VK_O);
+            inputManager.mapToKey(gaPausa, KeyEvent.VK_P);
+        }
     }
 
 
@@ -137,7 +177,6 @@ public class GameManager extends GameCore {
                
                 player.jump(false);
             }
-           
             player.setVelocityX(velocityX);
         }
 
@@ -273,7 +312,11 @@ public class GameManager extends GameCore {
 
         // player is dead! start map over
         if (player.getState() == Creature.STATE_DEAD) {
-            map = resourceManager.reloadMap();
+            if(player.getVida()<0) {
+                map = resourceManager.reloadMap();
+            }
+            else 
+                player.setState(Creature.STATE_NORMAL);
             
             return;
         }
@@ -284,6 +327,7 @@ public class GameManager extends GameCore {
         // update player
         updateCreature(player, elapsedTime);
         player.update(elapsedTime);
+        bIsJumping=false;
         
     
 
@@ -404,9 +448,11 @@ public class GameManager extends GameCore {
                 player.jump(true);
             }
             else {
-                // player dies!
+                // player lose life
                 finish = 0;
-                player.setState(Creature.STATE_DYING);
+                player.setState(Creature.STATE_HURT);
+                player.setVida(player.getVida()-1,true);
+                map.setPlayer(player);
             }
         }
     }
@@ -434,7 +480,7 @@ public class GameManager extends GameCore {
             toggleDrumPlayback();
         }
         else if (powerUp instanceof PowerUp.Goal) {
-            if(finish >= 5){
+            if(finish >= 0){
              // remove it from the map
             map.removeSprite(powerUp);
             // advance to next map
@@ -443,9 +489,22 @@ public class GameManager extends GameCore {
                 new EchoFilter(2000, .7f), false);
             finish = 0;
            map=resourceManager.loadNextMap();
-            midiPlayer.play(midiPlayer.getSequence("sounds/poison.mid"), true);
+            if(resourceManager.GetCurrentMap() == 2) {
+                renderer.setBackground(
+                    resourceManager.loadImage("Escenarios/Fondo01A.png"),
+                    resourceManager.loadImage("Escenarios/Fondo01B.png"),null);
+                midiPlayer.play(midiPlayer.getSequence("sounds/poison.mid"), 
+                        true);
             }
-            else{
+            else if(resourceManager.GetCurrentMap() == 3) {
+                renderer.setBackground(
+                    resourceManager.loadImage("Escenarios/Fondo03A.png"),
+                    resourceManager.loadImage("Escenarios/Fondo03B.png"),
+                    resourceManager.loadImage("Escenarios/Fondo03C.png"));
+                midiPlayer.play(midiPlayer.getSequence("sounds/Yell.mid"), 
+                        true);
+            }
+            else{}
                 
             }
         }

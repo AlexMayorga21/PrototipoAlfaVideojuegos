@@ -9,6 +9,8 @@ import java.awt.event.*;
 import java.util.List;
 import java.util.ArrayList;
 import javax.swing.SwingUtilities;
+import java.awt.Image;
+       
 
 /**
     The InputManager manages input of key and mouse events.
@@ -22,9 +24,17 @@ public class InputManager implements KeyListener, MouseListener,
     */
     public static final Cursor INVISIBLE_CURSOR =
         Toolkit.getDefaultToolkit().createCustomCursor(
-            Toolkit.getDefaultToolkit().getImage("input/Enemigo1D1.png"),
+            Toolkit.getDefaultToolkit().getImage(""),
             new Point(0,0),
-            "visible");
+            "invisible");
+    /**
+        A visble cursor
+     */
+    public static final Cursor VISIBLE_CURSOR = 
+            Toolkit.getDefaultToolkit().createCustomCursor(
+                    Toolkit.getDefaultToolkit()
+                            .getImage("images/UI/13PowerUp0.png")
+                    , new Point(0,0), "VISIBLE");
 
     // mouse codes
     public static final int MOUSE_MOVE_LEFT = 0;

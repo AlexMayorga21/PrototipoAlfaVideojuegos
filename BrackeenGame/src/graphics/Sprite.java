@@ -11,6 +11,7 @@ public class Sprite {
     // velocity (pixels per millisecond)
     private float dx;
     private float dy;
+    private boolean moving;
 
     /**
         Creates a new Sprite object with the specified Animation.
@@ -24,9 +25,12 @@ public class Sprite {
         on the velocity.
     */
     public void update(long elapsedTime) {
+        float oldX=x;
+        float oldY=y;
         x += dx * elapsedTime;
         y += dy * elapsedTime;
         anim.update(elapsedTime);
+        
     }
 
     /**

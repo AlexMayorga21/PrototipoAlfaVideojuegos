@@ -2,6 +2,7 @@ package com.brackeen.javagamebook.test;
 
 import java.awt.*;
 import javax.swing.ImageIcon;
+import javax.swing.JFrame;
 
 import com.brackeen.javagamebook.graphics.ScreenManager;
 
@@ -9,7 +10,7 @@ import com.brackeen.javagamebook.graphics.ScreenManager;
     Simple abstract class used for testing. Subclasses should
     implement the draw() method.
 */
-public abstract class GameCore {
+public abstract class GameCore extends JFrame {
 
     protected static final int FONT_SIZE = 24;
 

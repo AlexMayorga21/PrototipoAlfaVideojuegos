@@ -1,71 +1,71 @@
-package com.brackeen.javagamebook.tilegame.sprites;
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 
+package tilegame.sprites;
+
+import com.brackeen.javagamebook.graphics.Animation;
+import com.brackeen.javagamebook.graphics.Sprite;
+import com.brackeen.javagamebook.tilegame.sprites.Creature;
+import static com.brackeen.javagamebook.tilegame.sprites.Creature.STATE_DEAD;
+import static com.brackeen.javagamebook.tilegame.sprites.Creature.STATE_DYING;
+import static com.brackeen.javagamebook.tilegame.sprites.Creature.STATE_NORMAL;
 import java.lang.reflect.Constructor;
-import com.brackeen.javagamebook.graphics.*;
+
 
 /**
-    A Creature is a Sprite that is affected by gravity and can
-    die. It has four Animations: moving left, moving right,
-    dying on the left, and dying on the right.
-*/
-public abstract class Creature extends Sprite {
-
+ *
+ * @author DiegoMayorga
+ */
+public class Proyectil extends Sprite {
+    
     /**
         Amount of time to go from STATE_DYING to STATE_DEAD.
     */
     private static final int DIE_TIME = 1000;
-    
     public static final int STATE_NORMAL = 0;
     public static final int STATE_DYING = 1;
     public static final int STATE_DEAD = 2;
-    public static final int STATE_HURT = 3;
+    public static final int LADO_DERECHO = 1;
+    public static final int LADO_IZQUIERDO = 2;
+    public static final int POWER_1 = 1;
+    public static final int POWER_2 = 2;
+    public static final int POWER_3 = 3;
     public boolean move;
-
-    protected Animation left;
-    protected Animation right;
-    protected Animation deadLeft;
-    protected Animation deadRight;
-    protected Animation hurtRight;
-    protected Animation hurtLeft;
+    private int iHitPoints;
+    private Animation left;
+    private Animation right;
     protected int state;
+    private int iLado; //1 izquierda //2 derecha
+    private int iXpersonaje;
+    private int iYpersonaje;
     protected long stateTime;
-    protected int iVidicua;
-   
-
-    /**
-        Creates a new Creature with the specified Animations.
-    */
-    public Creature(Animation left, Animation right,
-        Animation deadLeft, Animation deadRight, Animation hurtLeft,
-        Animation hurtRight)
-    {
-        
-        super(right);
-             
-        this.left = left;
-        this.right = right;
-        this.deadLeft = deadLeft;
-        this.deadRight = deadRight;
-        this.hurtLeft = hurtLeft;
-        this.hurtRight =hurtRight;
-        
+    private int iTipoDeProyectil;
+    private Animation animPersonajeAnimacion;
+    
+    
+    public Proyectil(Animation left, Animation right) {
+        super(left);
+        this.left=left;
+        this.right=right;
+        iLado=LADO_IZQUIERDO;
+        iXpersonaje=0;
+        iYpersonaje=0;
         state = STATE_NORMAL;
+        iTipoDeProyectil = POWER_1;
+       
         move = true;
     }
-
-
+    
     public Object clone() {
         // use reflection to create the correct subclass
         Constructor constructor = getClass().getConstructors()[0];
         try {
-            return constructor.newInstance(new Object[] {
-                (Animation)left.clone(),
-                (Animation)right.clone(),
-                (Animation)deadLeft.clone(),
-                (Animation)deadRight.clone(),
-                (Animation)hurtLeft.clone(),
-                (Animation)hurtRight.clone()
-            });
+            return constructor.newInstance(
+                new Object[] {(Animation)left.clone(),
+                (Animation)left.clone()});
         }
         catch (Exception ex) {
             // should never happen
@@ -73,8 +73,6 @@ public abstract class Creature extends Sprite {
             return null;
         }
     }
-
-
     /**
         Gets the maximum speed of this Creature.
     */
@@ -87,25 +85,21 @@ public abstract class Creature extends Sprite {
         Wakes up the creature when the Creature first appears
         on screen. Normally, the creature starts moving left.
     */
-    public void wakeUp() {
+    public void wakeUp(int xP, int yP, int iLado, int iTipoDeProyectil) {
+        this.iLado=iLado;
+        this.iTipoDeProyectil=iTipoDeProyectil;
+        iXpersonaje=xP;
+        iYpersonaje=yP;
+        state=STATE_DYING;
+        if(iTipoDeProyectil == POWER_2) {
+            setVelocityX(-getMaxSpeed());
+        } 
         if (getState() == STATE_NORMAL && getVelocityX() == 0) {
             setVelocityX(-getMaxSpeed());
         }
     }
-    
-    public int getVida() {
-        return iVidicua;
-    }
-    
-    public void setVida(int ivida, boolean hurt) {
-        if(hurt) {
-            iVidicua=ivida;
-            state=STATE_HURT;
-        }
-        else
-            iVidicua=ivida;
-    }
-    
+
+
     /**
         Gets the state of this Creature. The state is either
         STATE_NORMAL, STATE_DYING, or STATE_DEAD.
@@ -171,28 +165,14 @@ public abstract class Creature extends Sprite {
     public void update(long elapsedTime) {
         // select the correct Animation
         Animation newAnim = anim;
-        
-        if (getVelocityX() < 0) {
+        if (state == STATE_DYING && iLado==1) {
             newAnim = left;
         }
-        else if (getVelocityX() > 0) {
+        else if (state == STATE_DYING && iLado == 2) {
             newAnim = right;
-        }
-        if (state == STATE_DYING && newAnim == left) {
-            newAnim = deadLeft;
-        }
-        else if (state == STATE_DYING && newAnim == right) {
-            newAnim = deadRight;
-        }
-        else if (state == STATE_HURT && newAnim == left) {
-            newAnim = hurtRight;
-        }
-        else if (state == STATE_HURT && newAnim == right) {
-            newAnim =hurtLeft;
         }
        
         // update the Animation
-        if(move == true){
         if (anim != newAnim ) {
             anim = newAnim;
             anim.start();
@@ -200,14 +180,20 @@ public abstract class Creature extends Sprite {
         else {
             anim.update(elapsedTime);
         }
-        
-        }
-
         // update to "dead" state
         stateTime += elapsedTime;
-        if (state == STATE_DYING && stateTime >= 630) {
+        if (state == STATE_DYING && stateTime >= 300) {
             setState(STATE_DEAD);
         }
     }
+    
+    public int getHitPoints() {
+        return iHitPoints;
+    }
+    
+    public void setHitPoints(int iHP) {
+        iHitPoints=iHP;
+    }
 
 }
+
