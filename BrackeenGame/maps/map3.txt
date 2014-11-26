@@ -8,14 +8,23 @@
 #   *       Goal
 #   1       Bad Guy 1 (grub)
 #   2       Bad Guy 2 (fly)
-                                                                 
-II                                                                                   IIIIIII
-II                                                                             *     IIIIIII
-II                                                                    o1!     II     IIIIIII
-II       ABCDEFGHIJKLMNOPQRSTUVWX===================                  IIII           IIIIIII
-II                                                         !   1  !                  IIIIIII
-II                        1   !      1                    IIIIIIIIII                 IIIIIII          
-II                    IIIIIIIIIIIIIIIII                                              IIIIIII       
-II                    IJJJJJJJJJJJJJJJI                                              IIIIIII
-II             2  o   IJJJJJJJJJJJJJJJI               2                          2   IIIIIII        
-IIBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBIIIIIII
+
+II        IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
+II        IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
+II        IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
+II                                                                                               IIIIIII
+II                                                                                               IIIIIII
+II                                                                                               IIIIIII
+II                                                                                               IIIIIII
+II                                                                                               IIIIIII
+II                                                                                               IIIIIII
+II                                                                                               IIIIIII
+II                                                                                          *    IIIIIII
+II                                                                    o1!     IIIIIIIII          IIIIIII
+II       ABCDEFGHIJKLMNOPQRSTUVWX===================                  IIII                       IIIIIII
+II                                                         !   1  !                              IIIIIII
+II                        1   !      1                    IIIIIIIIII                             IIIIIII          
+II                    IIIIIIIIIIIIIIIII                                                          IIIIIII       
+II                    IJJJJJJJJJJJJJJJI                                                          IIIIIII
+II             2  o   IJJJJJJJJJJJJJJJI               2                          2               IIIIIII        
+IIBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBIIIIIII

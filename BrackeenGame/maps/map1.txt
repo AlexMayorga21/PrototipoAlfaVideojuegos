@@ -10,7 +10,7 @@
 #   2       Bad Guy 2 (fly)
 O         JILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJO
 N         JILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJPJILPJILN
-N         JILPQR                                                                                           N
+N         JILPQRLPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJPJILPJILN
 N         ABCOST                                                                                           N
 N         DEFNUV                                                                                          *N
 N         GHKMWX                     2                                                             QRABCABCN
