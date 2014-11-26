@@ -9,22 +9,22 @@
 #   1       Bad Guy 1 (grub)
 #   2       Bad Guy 2 (fly)
 
-O         ABBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBC
-N         DEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEF
-N         GHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHK
-N                                                                                                          O 
-N                                              3                                 4                         N
-N                              2              3                                    4               *       N 
-N                                           3                                                   ABBBBBBC   N
-N                                         3                     2                    4          DEEEEEEF   N
-N                                                                                               GHHHHHHK   N
-N                                                                                      4                   N
-N                                                                                                          N
-N                                                                     o1!     JIIIIIIIL          ABBBBBBBBBN
-N       JIIIIIIIIIIIIIIIL                                             JIIL                       DEEEEEEEEEN
-N                                                         !   1  !                           ABBBTEEEEEEEEEN
-N                        1   !      1                    JIIIIIIIIL          3               DEEQHHHHHHREEEN     
-N                    ABBBBBBBBBBBBBBBC                                                       DEEF======DEEEN  
-N                    DEEEEEEEEEEEEEEEF                                                       DEEF999999DEEEN
-N             2  o   DEEEEEEEEEEEEEEEF               2           2                      5    DEEF999999DEEEN    
-WIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIX
+O         ABBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBC========
+N         DEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEF99999999
+N         GHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHK99999999
+N                                                                                                          O99999999
+N                                              3                                 4                ooo      N99999999
+N                              2              3                                    4              o*o      N99999999
+N                                           3                                                   ABBBBBBC   N99999999
+N                                         3                     2                    4          DEEEEEEF   N99999999
+N                                                                                               GHHHHHHK   N99999999
+N                                                                                      4            ooooo  N99999999
+N                                                                     o1!                           ooooo  N99999999
+N            oooo   oooo                                              JIIL    JIIIIIIIL          ABBBBBBBBBN99999999
+N       JIIIIIIIIIIIIIIIL                         !   1  !                                       DEEEEEEEEEN99999999
+N                                                JIIIIIIIIL                                  ABBBTEEEEEEEEEN99999999
+N                        1   !      1                                        3               DEEQHHHHHHREEEN99999999
+N                    ABBBBBBBBBBBBBBBC                                                       DEEF======DEEEN99999999  
+N                    DEEEEEEEEEEEEEEEF                                                       DEEF999999DEEEN99999999
+N             2  o   DEEEEEEEEEEEEEEEF               2           2                      5    DEEF999999DEEEN99999999    
+WIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIX99999999

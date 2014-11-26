@@ -12,21 +12,20 @@
 O         ABBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBC
 N         DEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEF
 N         GHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHK
-N                                                                                                          O
-N         ABBBBC                                       3                                                   N
-N         DEEEEF                                                        1                                  N
+N                                                      3                                                   O
+N         ABBBBC                                                        1                                  N
 N         DEEEEF        4                                      O                                    3     *N
 N         GHHHHK                     2                         N          1                        ABBBBBBBN
 N                         4               2                    N           1                       GHEEEEEEN
-N                                              2               N             1                   UV  GHHHHHN
-N                           4                                  N               1                 WX        N
-N                                   4                          M                               UV          N
-N                                                                                              WX          N
-N                               4                     1                AC                  AC              N
-N                                          AC                          DF        1         DF              N
+N                                              2               N             1                   UV!!GHHHHHN
+N                           4                                  N               1                 WX!!!!!!!!N
+N                                   4                          M                               UV!!!!!!!!!!N
+N                                                                                              WX!!!!!!!!!!N
+N                               4                     1                AC                  AC  !!!!!!!!!!!!N
+N                                          AC                          DF        1         DF  !!!!!!!!!!!!N
 N  AC  AC  UV  UV  UV  UV  UV  UV  UV  UV  DF  UV  UV  UV  UV  UV  UV  DF  UV  UV  UV  UV  DF  UV  UV  UV  N
 N  DF  DF  WX  WX  WX  WX  WX  WX  WX  WX  GK  WX  WX  WX  WX  WX  WX  GK  WX  WX  WX  WX  GK  WX  WX  WX  N
-N  DF  GK                        4     4              1                           1       1                N
+N  DF  GKooooooooooooooooooooo4oo4oooooooooo1ooooooooooooooooooo1ooo1ooooooooooooooooooooooooooooooooooooooN
 N==DF======================================================================================================N
 N99DF999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999N
 WIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIX
