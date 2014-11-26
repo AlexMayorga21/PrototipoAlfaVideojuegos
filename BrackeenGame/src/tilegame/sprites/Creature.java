@@ -25,8 +25,6 @@ public abstract class Creature extends Sprite {
     protected Animation right;
     protected Animation deadLeft;
     protected Animation deadRight;
-    protected Animation hurtRight;
-    protected Animation hurtLeft;
     protected int state;
     protected long stateTime;
     protected int iVidicua;
@@ -36,8 +34,7 @@ public abstract class Creature extends Sprite {
         Creates a new Creature with the specified Animations.
     */
     public Creature(Animation left, Animation right,
-        Animation deadLeft, Animation deadRight, Animation hurtLeft,
-        Animation hurtRight)
+        Animation deadLeft, Animation deadRight)
     {
         
         super(right);
@@ -46,8 +43,6 @@ public abstract class Creature extends Sprite {
         this.right = right;
         this.deadLeft = deadLeft;
         this.deadRight = deadRight;
-        this.hurtLeft = hurtLeft;
-        this.hurtRight =hurtRight;
         
         state = STATE_NORMAL;
         move = true;
@@ -62,9 +57,7 @@ public abstract class Creature extends Sprite {
                 (Animation)left.clone(),
                 (Animation)right.clone(),
                 (Animation)deadLeft.clone(),
-                (Animation)deadRight.clone(),
-                (Animation)hurtLeft.clone(),
-                (Animation)hurtRight.clone()
+                (Animation)deadRight.clone()
             });
         }
         catch (Exception ex) {
@@ -100,7 +93,7 @@ public abstract class Creature extends Sprite {
     public void setVida(int ivida, boolean hurt) {
         if(hurt) {
             iVidicua=ivida;
-            state=STATE_HURT;
+            state=STATE_DYING;
         }
         else
             iVidicua=ivida;
@@ -183,12 +176,6 @@ public abstract class Creature extends Sprite {
         }
         else if (state == STATE_DYING && newAnim == right) {
             newAnim = deadRight;
-        }
-        else if (state == STATE_HURT && newAnim == left) {
-            newAnim = hurtRight;
-        }
-        else if (state == STATE_HURT && newAnim == right) {
-            newAnim =hurtLeft;
         }
        
         // update the Animation

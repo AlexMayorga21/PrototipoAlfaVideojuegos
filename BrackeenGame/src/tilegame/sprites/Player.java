@@ -14,12 +14,15 @@ public class Player extends Creature {
     private Animation animJumpRight;
     private boolean onGround;
     private boolean bIsJumping;
+    private int iVidicua;
+    
 
     public Player(Animation left, Animation right,
-        Animation deadLeft, Animation deadRight, Animation hurtLeft,
-        Animation hurtRight, Animation jumpLeft, Animation jumpRight)
+        Animation deadLeft, Animation deadRight, Animation jumpLeft, 
+        Animation jumpRight)
     {
-        super(left, right, deadLeft, deadRight, hurtLeft, hurtRight);
+        
+        super(left, right, deadLeft, deadRight);
         animJumpLeft = jumpLeft;
         animJumpRight = jumpRight;
     }
@@ -92,10 +95,9 @@ public class Player extends Creature {
                 (Animation)right.clone(),
                 (Animation)deadLeft.clone(),
                 (Animation)deadRight.clone(),
-                (Animation)hurtLeft.clone(),
-                (Animation)hurtRight.clone(),
                 (Animation)animJumpLeft.clone(),
-                (Animation)animJumpRight.clone(),
+                (Animation)animJumpRight.clone()
+                       
             });
         }
         catch (Exception ex) {

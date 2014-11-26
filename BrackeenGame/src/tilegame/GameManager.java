@@ -314,6 +314,9 @@ public class GameManager extends GameCore {
         if (player.getState() == Creature.STATE_DEAD) {
             if(player.getVida()<0) {
                 map = resourceManager.reloadMap();
+                player=(Creature)map.getPlayer();
+                player.setVida(iVida, false);
+                map.setPlayer(player);
             }
             else 
                 player.setState(Creature.STATE_NORMAL);
@@ -448,11 +451,11 @@ public class GameManager extends GameCore {
                 player.jump(true);
             }
             else {
-                // player lose life
+                // player dies!
                 finish = 0;
-                player.setState(Creature.STATE_HURT);
-                player.setVida(player.getVida()-1,true);
+                player.setState(Creature.STATE_DYING);
                 map.setPlayer(player);
+                player.setVida(player.getVida()-1,true);
             }
         }
     }
