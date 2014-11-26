@@ -9,22 +9,24 @@
 #   1       Bad Guy 1 (grub)
 #   2       Bad Guy 2 (fly)
                                                                  
-O         JILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJO
-N                                                                                                          N
-N         JILPQR                                                                                           N
-N         ABCOST                                                                                           N
-N         DEFNUV                                               M                                          *N
-N         GHKMWX                     2                         N                                   QRABCABCN
-N                                         2                    N                                   STDEFDEFN
-N                                              2               N                                 UV  GHKGHKN
-N                                                              N                                 WX        N
-N                                                              N                               QR          N
-N                                                                                              ST          N
-N                                                                     UV                     UV            N
-N                                          UV                         WX                     WX            N
-N==UV  QR==UV==UV==QR==UV==UV==QR==UV==UV==QR==UV==UV==QR==UV==UV==QR==UV==UV==QR==UV==UV==QR==UV==UV==QR==N
-N99WX99ST99WX99WX99ST99WX99WX99ST99WX99WX99ST99WX99WX99ST99WX99WX99ST99WX99WX99ST99WX99WX99ST99WX99WX99ST99N
-N99UV99QR99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999N
-N99WX999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999N
-M99JI999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999M
-JILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILP
+O         ABBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBC
+N         DEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEF
+N         GHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHK
+N                                                                                                          O
+N         ABBBBC                                       3                                                   N
+N         DEEEEF                                                        1                                  N
+N         DEEEEF                                               O                                    3     *N
+N         GHHHHK                     2                         N          1                        ABBBBBBBN
+N                                         2                    N           1                       GHEEEEEEN
+N                                              2               N             1                   UV  GHHHHHN
+N                                                              N               1                 WX        N
+N                                                              M                               UV          N
+N                                                                                              WX          N
+N                                                     1                AC                  AC              N
+N                                          UV                          DF        1         DF              N
+N  AC  QR  UV  UV  UV  UV  UV  UV  UV  UV  WX  UV  UV  UV  UV  UV  UV  DF  UV  QR  UV  UV  DF  UV  UV  UV  N
+N  DF  ST  WX  WX  WX  WX  WX  WX  WX  WX  ST  WX  WX  WX  WX  WX  WX  GK  WX  ST  WX  WX  GK  WX  WX  WX  N
+N  DF  QR                                             1                           1       1                N
+N==DF======================================================================================================N
+N99DF999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999N
+WIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIX
