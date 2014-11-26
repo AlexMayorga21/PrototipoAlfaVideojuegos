@@ -205,7 +205,7 @@ public class ResourceManager {
                     addSprite(newMap, Mugre3Sprite, x, y);
                 }
                 else if (ch == '4') {
-                    addSprite(newMap, Mugre3Sprite, x, y);
+                    addSprite(newMap, Mugre4Sprite, x, y);
                 }
             }
         }
