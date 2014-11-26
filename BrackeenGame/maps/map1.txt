@@ -13,17 +13,17 @@ N         JILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJI
 N         JILPQRLPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJPJILPJILN
 N         ABCOST                                                                                           N
 N         DEFNUV                                                                                          *N
-N         GHKMWX                     2                                                             QRABCABCN
-N                                         2                                                        STDEFDEFN
-N                                              2                                                 UV  GHKGHKN
+N         GHKMWX                     2                                                             QBBBBBBBN
+N                                         2                                                        STEEEEEEN
+N                                              2                                                 UV  GHHHHHN
 N                                                              o                                 WX        N
 N                    oooooooo                                  M                               QR          N
-N                 QRABCABCABC                                  N                               ST          N
-N                 STDEFDEFDEF                                  N      UV                     UV            N
-N               UV  GHKGHKGHK              UV                  N      WX                     WX            N
+N                 ABBBBBBBBBC                                  N                               ST          N
+N                 WTEEEEEEEEF                                  N      UV                     UV            N
+N               UV  GHHHHHHHK              UV                  N      WX                     WX            N
 N               WX                         WX          QR      N                         1                 N
-N             QR                                       ST      N                 ABBBBBBBO                 N
-N             ST                               UV                                D       N                 N
+N             UV                                       ST      N                 ABBBBBBBO                 N
+N             WX                               UV                                D       N                 N
 N           UV                                 WX              o                 D       N                 N
 M           WX o           3 I    o                            M      1   1      D   3   N31313131313131313M
 JILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILP
