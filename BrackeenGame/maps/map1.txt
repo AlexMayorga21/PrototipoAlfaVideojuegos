@@ -9,7 +9,7 @@
 #   1       Bad Guy 1 (grub)
 #   2       Bad Guy 2 (fly)
 O         JILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJO
-N                                                                                                          N
+N         JILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJPJILPJILN
 N         JILPQR                                                                                           N
 N         ABCOST                                                                                           N
 N         DEFNUV                                                                                          *N

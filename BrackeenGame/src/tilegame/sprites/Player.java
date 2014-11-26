@@ -17,7 +17,7 @@ public class Player extends Creature {
     {
         
         super(left, right, deadLeft, deadRight);
-        this.jump=jump;
+        this.jump = jump;
     }
 
 
@@ -71,7 +71,7 @@ public class Player extends Creature {
 
 
     public float getMaxSpeed() {
-        return 0.5f;
+        return 0.6f;
     }
 
 }

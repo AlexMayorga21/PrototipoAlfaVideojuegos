@@ -18,6 +18,8 @@ import com.brackeen.javagamebook.tilegame.sprites.*;
 public class ResourceManager {
 
     private ArrayList tiles;
+    private ArrayList alTiles2;
+    private ArrayList alTiles3;
     private ArrayList alSpecialTiles;
     private int currentMap;
     private GraphicsConfiguration gc;
@@ -158,9 +160,9 @@ public class ResourceManager {
                     if(currentMap == 1)
                     newMap.setTile(x, y, (Image)tiles.get(tile));
                     else if(currentMap == 2)
-                        newMap.setTile(x, y, (Image)tiles.get(tile+24));
+                        newMap.setTile(x, y, (Image)alTiles2.get(tile));
                     else if(currentMap == 3)
-                        newMap.setTile(x, y, (Image)tiles.get(tile+48));
+                        newMap.setTile(x, y, (Image)alTiles3.get(tile));
                 }
                 //Tile especial de agua
                 else if(ch == '9') {
@@ -243,26 +245,33 @@ public class ResourceManager {
         // keep looking for tile A,B,C, etc. this makes it
         // easy to drop new tiles in the images/ directory
         tiles = new ArrayList();
+        alTiles2 = new ArrayList();
+        alTiles3 = new ArrayList();
         alSpecialTiles = new ArrayList();
         char ch = 'A';
-        int iCont=0;
-        int iGroundType=1;
         alSpecialTiles.add(loadImage("Tilesets/9.png"));
         alSpecialTiles.add(loadImage("Tilesets/;.png"));
         alSpecialTiles.add(loadImage("Tilesets/=.png"));
         alSpecialTiles.add(loadImage("Tilesets/@.png"));
         while (true) {
-            String name = "Tilesets/" + ch + "_" + iGroundType + ".png";
+            String name = "Tilesets/" + ch + "_" + 1 + ".png";
             File file = new File("images/" + name);
             if (!file.exists()) {
                 break;
             }
             tiles.add(loadImage(name));
-            if(iCont==23) {
-                iGroundType = iGroundType + 2;
-                iCont=0;
+            name = "Tilesets/" + ch + "_" + 3 + ".png";
+            file = new File("images/" + name);
+            if (!file.exists()) {
+                break;
             }
-            iCont++;
+            alTiles2.add(loadImage(name));
+            name = "Tilesets/" + ch + "_" + 5 + ".png";
+            file = new File("images/" + name);
+            if (!file.exists()) {
+                break;
+            }
+            alTiles3.add(loadImage(name));
             ch++;
         }
     }
