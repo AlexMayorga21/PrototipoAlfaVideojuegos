@@ -8,22 +8,22 @@
 #   *       Goal
 #   1       Bad Guy 1 (grub)
 #   2       Bad Guy 2 (fly)
-O         JILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJO
-N         JILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJPJILPJILN
-N         JILPQRLPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJPJILPJILN
-N         ABCOST                                                                                           N
-N         DEFNUV                                                                                          *N
-N         GHKMWX                     2                                                             QBBBBBBBN
-N                                         2                                                        STEEEEEEN
+O         ABBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBC
+N         DEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEF
+N         GHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHK
+N                                                                                                          O
+N                                                                                                         *N
+N                                    2                                                             ABBBBBBBN
+N                                         2                                                        GHREEEEEN
 N                                              2                                                 UV  GHHHHHN
 N                                                              o                                 WX        N
-N                    oooooooo                                  M                               QR          N
-N                 ABBBBBBBBBC                                  N                               ST          N
-N                 WTEEEEEEEEF                                  N      UV                     UV            N
+N                    oooooooo                                  O                               UV          N
+N                 ABBBBBBBBBC                                  N                               WX          N
+N                 GHREEEEEEEF                                  N      UV                     UV            N
 N               UV  GHHHHHHHK              UV                  N      WX                     WX            N
-N               WX                         WX          QR      N                         1                 N
-N             UV                                       ST      N                 ABBBBBBBO                 N
-N             WX                               UV                                D       N                 N
-N           UV                                 WX              o                 D       N                 N
-M           WX o           3 I    o                            M      1   1      D   3   N31313131313131313M
-JILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILPJILP
+N               WX                         WX          UV      M                         1                 N
+N             UV                                       WX                        UIIIIIIIV                 N
+N             WX                               UV                                N=======N                 N
+N           UV                                 WX              o                 N9999999N                 N
+N           WX o           3 P    o                            P      1   1      N9999999N31313131313131313N
+WIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIX
