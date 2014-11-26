@@ -74,9 +74,9 @@ public class GameManager extends GameCore {
         // load resources
         renderer = new TileMapRenderer();
         renderer.setBackground(
-                resourceManager.loadImage("Escenarios/Fondo01A.png"),
+                resourceManager.loadImage("Escenarios/Fondo03A.png"),
                 resourceManager.loadImage("Escenarios/Fondo01B.png"),
-                null);
+                resourceManager.loadImage("Escenarios/Fondo03C.png"));
 
         // load first map
         map = resourceManager.loadNextMap();
@@ -495,8 +495,9 @@ public class GameManager extends GameCore {
            map=resourceManager.loadNextMap();
             if(resourceManager.GetCurrentMap() == 2) {
                 renderer.setBackground(
-                    resourceManager.loadImage("Escenarios/Fondo01A.png"),
-                    resourceManager.loadImage("Escenarios/Fondo01B.png"),null);
+                    resourceManager.loadImage("Escenarios/Fondo03A.png"),
+                    resourceManager.loadImage("Escenarios/Fondo01B.png"),                    
+                    resourceManager.loadImage("Escenarios/Fondo03C.png"));
                 midiPlayer.play(midiPlayer.getSequence("sounds/poison.mid"), 
                         true);
             }
