@@ -355,9 +355,9 @@ public class ResourceManager {
         
         // load jumping images for Pomf
         images[4] = new Image[]{
-            loadImage("Pomf/PomfJ4.png"),
-            loadImage("Pomf/PomfJ4.png"),
-            loadImage("Pomf/PomfJ4.png"),
+            loadImage("Pomf/PomfJ1.png"),
+            loadImage("Pomf/PomfJ2.png"),
+            loadImage("Pomf/PomfJ3.png"),
             loadImage("Pomf/PomfJ4.png"),
         };
         images[5] = new Image[images[4].length];
@@ -461,20 +461,20 @@ public class ResourceManager {
     private void loadPowerUpSprites() {//Se cargan las animaciones de los objetos a agarrar
         // create "goal" sprite
         Animation anim = new Animation();
-        anim.addFrame(loadImage("/UI/13powerUp1.png"), 150);
-        anim.addFrame(loadImage("/UI/13powerUp1.png"), 150);
+        anim.addFrame(loadImage("/Mascaras/Mask1P.png"), 150);
+        anim.addFrame(loadImage("/Mascaras/Mask1P.png"), 150);
         goalSprite = new PowerUp.Goal(anim);
 
         // create "star" sprite
         anim = new Animation();
-        anim.addFrame(loadImage("/UI/13powerUp2.png"), 100);
-        anim.addFrame(loadImage("/UI/13powerUp2.png"), 100);
+        anim.addFrame(loadImage("/Mascaras/Mask2P.png"), 100);
+        anim.addFrame(loadImage("/Mascaras/Mask2P.png"), 100);
         coinSprite = new PowerUp.Gota(anim);
 
         // create "music" sprite
         anim = new Animation();
-        anim.addFrame(loadImage("/UI/13powerUp3.png"), 150);
-        anim.addFrame(loadImage("/UI/13powerUp3.png"), 150);
+        anim.addFrame(loadImage("/Mascaras/Mask3P.png"), 150);
+        anim.addFrame(loadImage("/Mascaras/Mask3P.png"), 150);
         musicSprite = new PowerUp.Music(anim);
     }
 
