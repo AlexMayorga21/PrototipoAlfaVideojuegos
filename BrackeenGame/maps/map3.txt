@@ -14,12 +14,12 @@ N         DEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
 N         GHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHK
 N                                                                                                          O 
 N                                              3                                 4                         N
-N                              2              3                                    4                       N 
+N                              2              3                    5               4               *       N 
 N                                           3                                      4            ABBBBBBC   N
 N                                         3                     2                    4          DEEEEEEF   N
 N                                                                                    4          GHHHHHHK   N
 N                                                                                      4                   N
-N                                                                                                         *N
+N                                                                                                          N
 N                                                                     o1!     JIIIIIIIL          ABBBBBBBBBN
 N       JIIIIIIIIIIIIIIIL                                             JIIL                       DEEEEEEEEEN
 N                                                         !   1  !                           ABBBTEEEEEEEEEN
