@@ -23,10 +23,10 @@ N                                                              N               1
 N                                                              M                               UV          N
 N                                                                                              WX          N
 N                                                     1                AC                  AC              N
-N                                          UV                          DF        1         DF              N
-N  AC  QR  UV  UV  UV  UV  UV  UV  UV  UV  WX  UV  UV  UV  UV  UV  UV  DF  UV  QR  UV  UV  DF  UV  UV  UV  N
-N  DF  ST  WX  WX  WX  WX  WX  WX  WX  WX  ST  WX  WX  WX  WX  WX  WX  GK  WX  ST  WX  WX  GK  WX  WX  WX  N
-N  DF  QR                                             1                           1       1                N
+N                                          AC                          DF        1         DF              N
+N  AC  AC  UV  UV  UV  UV  UV  UV  UV  UV  DF  UV  UV  UV  UV  UV  UV  DF  UV  UV  UV  UV  DF  UV  UV  UV  N
+N  DF  DF  WX  WX  WX  WX  WX  WX  WX  WX  GK  WX  WX  WX  WX  WX  WX  GK  WX  WX  WX  WX  GK  WX  WX  WX  N
+N  DF  GK                                             1                           1       1                N
 N==DF======================================================================================================N
 N99DF999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999N
 WIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIX
