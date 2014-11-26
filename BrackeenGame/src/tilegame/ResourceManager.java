@@ -32,6 +32,7 @@ public class ResourceManager {
     private Sprite grubSprite;
     private Sprite flySprite;
     private Sprite Mugre3Sprite;
+    private Sprite Mugre4Sprite;
 
     /**
         Creates a new ResourceManager with the specified
@@ -203,6 +204,9 @@ public class ResourceManager {
                 else if (ch == '3') {
                     addSprite(newMap, Mugre3Sprite, x, y);
                 }
+                else if (ch == '4') {
+                    addSprite(newMap, Mugre3Sprite, x, y);
+                }
             }
         }
 
@@ -298,6 +302,10 @@ public class ResourceManager {
             loadImage("Enemigo3/Enemigo3W1.png"),
             loadImage("Enemigo3/Enemigo3W2.png"),
             loadImage("Enemigo3/Enemigo3W3.png"),
+            loadImage("Enemigo4/Enemigo4W1.png"),
+            loadImage("Enemigo4/Enemigo4W2.png"),
+            loadImage("Enemigo4/Enemigo4W3.png"),
+            
         };
 
         images[1] = new Image[images[0].length];
@@ -345,6 +353,15 @@ public class ResourceManager {
             loadImage("Enemigo3/Enemigo3D7.png"),
             loadImage("Enemigo3/Enemigo3D8.png"),
             loadImage("Enemigo3/Enemigo3D9.png"),
+            loadImage("Enemigo4/Enemigo4D1.png"),
+            loadImage("Enemigo4/Enemigo4D2.png"),
+            loadImage("Enemigo4/Enemigo4D3.png"),
+            loadImage("Enemigo4/Enemigo4D4.png"),
+            loadImage("Enemigo4/Enemigo4D5.png"),
+            loadImage("Enemigo4/Enemigo4D6.png"),
+            loadImage("Enemigo4/Enemigo4D7.png"),
+            loadImage("Enemigo4/Enemigo4D8.png"),
+            loadImage("Enemigo4/Enemigo4D9.png"),
         };
         images[3] = new Image[images[2].length];
         for(int i=0; i<images[2].length; i++) {
@@ -376,6 +393,7 @@ public class ResourceManager {
         Animation[] Mugre1Anim = new Animation[5];
         Animation[] Mugre2Anim = new Animation[5];
         Animation[] Mugre3Anim = new Animation[5];
+        Animation[] Mugre4Anim = new Animation[5];
         
         //Se guardan las imagenes para la animacion de caminado
         for (int i=0; i<2; i++) {
@@ -387,6 +405,8 @@ public class ResourceManager {
                 images[i][6], images[i][7], images[i][8]);
             Mugre3Anim[i] = createWalkingAnim(images[i][9],
                 images[i][10], images[i][11]);
+            Mugre4Anim[i] = createWalkingAnim(images[i][12],
+                images[i][13], images[i][14]);
         }
         // Se guardan las imagenes para la animacion de muerte
         for (int i=2; i<4; i++) {
@@ -402,6 +422,9 @@ public class ResourceManager {
             Mugre3Anim[i] = createDeadAnim(images[i][27], images[i][28],
                 images[i][29],images[i][30], images[i][31], images[i][32],
                 images[i][33], images[i][34],images[i][35]);
+            Mugre4Anim[i] = createDeadAnim(images[i][36], images[i][37],
+                images[i][38],images[i][39], images[i][40], images[i][41],
+                images[i][42], images[i][43],images[i][44]);
         }
         //Se guardan las imagenes de salto para pomf
         for (int i=4; i<6; i++) {
@@ -418,6 +441,8 @@ public class ResourceManager {
             Mugre2Anim[2], Mugre2Anim[3]);
         Mugre3Sprite = new Mugre3(Mugre3Anim[0], Mugre3Anim[1],
             Mugre3Anim[2], Mugre3Anim[3]);
+        Mugre4Sprite = new Mugre4(Mugre4Anim[0], Mugre4Anim[1], Mugre4Anim[2],
+        Mugre4Anim[3]);
     }
 
     private Animation createWalkingAnim(Image img1, Image img2,//Se cargan las animaciones de las mugres (enemigos)
