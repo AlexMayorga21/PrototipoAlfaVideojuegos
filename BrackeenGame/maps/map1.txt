@@ -13,17 +13,17 @@ N         DEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
 N         GHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHK
 N                                                                                                          O
 N                                                                                                         *N
-N                    444444444                2                                                             ABBBBBBBN
+N                                    2             4                                               ABBBBBBBN
 N                                         2                                                        GHREEEEEN
-N                                              2                                                 UV  GHHHHHN
+N                                    4         2                     4                           UV  GHHHHHN
 N                                                              o                                 WX        N
 N                    oooooooo                                  O                               UV          N
-N                 ABBBBBBBBBC                                  N                               WX          N
+N                 ABBBBBBBBBC         4               4        N                               WX          N
 N                 GHREEEEEEEF                                  N      UV                     UV            N
-N               UV  GHHHHHHHK              UV                  N      WX                     WX            N
+N               UV  GHHHHHHHK              UV                  N      WX        4            WX            N
 N               WX                         WX          UV      M                         1                 N
 N             UV                                       WX                        UIIIIIIIV                 N
-N             WX                               UV                                N=======N                 N
+N             WX                               UV            4                   N=======N                 N
 N           UV                                 WX              o                 N9999999N                 N
 N           WX o           3 P    o                            P      1   1      N9999999N31313131313131313N
 WIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIX
