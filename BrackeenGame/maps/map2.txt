@@ -20,8 +20,8 @@ N         GHHHHK                     2                         N          1     
 N                         4               2                    N           1                       GHEEEEEEN
 N                                              2               N             1                   UV  GHHHHHN
 N                           4                                  N               1                 WX        N
-N                             4     4                          M                               UV          N
-N                               4                                                              WX          N
+N                                   4                          M                               UV          N
+N                                                                                              WX          N
 N                               4                     1                AC                  AC              N
 N                                          AC                          DF        1         DF              N
 N  AC  AC  UV  UV  UV  UV  UV  UV  UV  UV  DF  UV  UV  UV  UV  UV  UV  DF  UV  UV  UV  UV  DF  UV  UV  UV  N
