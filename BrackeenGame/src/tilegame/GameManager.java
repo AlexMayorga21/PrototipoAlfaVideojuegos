@@ -506,7 +506,7 @@ public class GameManager extends GameCore {
                     resourceManager.loadImage("Escenarios/Fondo03A.png"),
                     resourceManager.loadImage("Escenarios/Fondo03B.png"),
                     resourceManager.loadImage("Escenarios/Fondo03C.png"));
-                midiPlayer.play(midiPlayer.getSequence("sounds/Yell.mid"), 
+                midiPlayer.play(midiPlayer.getSequence("sounds/poison.mid"), 
                         true);
             }
             else{}
