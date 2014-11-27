@@ -34,7 +34,7 @@ public class ResourceManager {
     private Sprite Mugre3Sprite;
     private Sprite Mugre4Sprite;
     private Sprite Mugre5Sprite;
-
+    
     /**
         Creates a new ResourceManager with the specified
         GraphicsConfiguration.

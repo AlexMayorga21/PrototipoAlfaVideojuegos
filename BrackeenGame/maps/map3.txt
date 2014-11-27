@@ -12,18 +12,19 @@ O         ABBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
 N         DEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEF
 N         GHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHK
 N                                                                                                          O
-N                                              3                                 4                ooo      N
-N                              2              3                                    4              o*o      N
-N                                           3                                                   ABBBBBBC   N
-N                                         3                     2                    4          DEEEEEEF   N
-N                                                                                               GHHHHHHK   N
-N                                                                                      4            ooooo  N
-N                                                                     o1!                           ooooo  N
-N            oooo   oooo                                              JIIL    JIIIIIIIL          ABBBBBBBBBN
-N       JIIIIIIIIIIIIIIIL                         !   1  !                                       DEEEEEEEEEN
-N                                                JIIIIIIIIL                                  ABBBTEEEEEEEEEN
-N                        1   !      1                                        3               DEEQHHHHHHREEEN
-N                    ABBBBBBBBBBBBBBBC                                                       DEEF======DEEEN
-N                    DEEEEEEEEEEEEEEEF                                                       DEEF999999DEEEN
-N             2  o   DEEEEEEEEEEEEEEEF               2           2                      5    DEEF999999DEEEN
+N         ABBBBC                      4        4                        1                                  N
+N         DEEEEF        4       3                              O                                    3     *N
+N         GHHHHK                     2                         N          1                        ABBBBBBBN
+N                         4               2   4       3        N           1                       GHEEEEEEN
+N        1                                     2               N             1                   UV  GHHHHHN
+N                           4                                  N               1      5          WX!!!!!!!!N
+N                                   4                          M                               JL!!!!!!!!!!N
+N                  5                     4                                                       !!!!!!!!!!N
+N                               4                     1                AC                  AC  !!!!!!!!!!!!N
+N                          5               AC      5    5      5       DF        1         DF  !!!!!!!!!!!!N
+N  AC  AC  UV  UV  UV  UV  UV  UV  UV  UV  DF  UV  UV  UV  UV  UV  UV  DF  UV  UV  UV  UV  DF  UV  UV  UV  N
+N  DF  DF  WX  WX  WX  WX  WX  WX  WX  WX  GK  WX  WX  WX  WX  WX  WX  GK  WX  WX  WX  WX  GK  WX  WX  WX  N
+N  DF  GKoo4 oo 4oo 4oo4 oo 4oo 4oo4 oo 4oo 4oo 4oo 4oo4 oo4 oo 4oo 4oo 4oo4 oo4 oo 4oo 4oo 4oo  oo  oo  ooN
+N==DF======================================================================================================N
+N99DF999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999N
 WIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIX

@@ -493,7 +493,7 @@ public class GameManager extends GameCore {
                 new EchoFilter(2000, .7f), false);
             finish = 0;
            map=resourceManager.loadNextMap();
-            if(resourceManager.GetCurrentMap() == 2) {
+            if(resourceManager.GetCurrentMap() == 3) {
                 renderer.setBackground(
                     resourceManager.loadImage("Escenarios/Fondo03A.png"),
                     resourceManager.loadImage("Escenarios/Fondo01B.png"),                    
@@ -501,7 +501,7 @@ public class GameManager extends GameCore {
                 midiPlayer.play(midiPlayer.getSequence("sounds/poison.mid"), 
                         true);
             }
-            else if(resourceManager.GetCurrentMap() == 3) {
+            if(resourceManager.GetCurrentMap() == 4) {
                 renderer.setBackground(
                     resourceManager.loadImage("Escenarios/Fondo03A.png"),
                     resourceManager.loadImage("Escenarios/Fondo03B.png"),
